@@ -53,6 +53,17 @@ GET <PDS服务器URL>?type=user&user=<用户编号>
 
 如果没有`system.webhook`变量，代表用户不接受任何互动。
 
+示例：
+```json
+{
+  "$system.ens$": "alice.eth",
+  "$system.webhook$": "https://pds.example.com/hook.php?user=alice",
+  "$nickname$": "Alice Corplic Li",
+  "$email$": ["alice", "example.org"],
+  "$social.qq$": 10002,
+  "$social.ap$": ["alice", "mastodon.social"]
+}
+```
 ## 2. 帖子信息
 
 向PDS服务器发送如下请求：
