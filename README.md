@@ -82,7 +82,7 @@ GET <PDS服务器URL>?type=post&user=<用户编号>&page=<帖子QID>
 ```
 
 这个端点返回一个JSON：
-```
+```json
 {
   "status": "<状态>"
 }
@@ -211,6 +211,20 @@ GET <统计API端点>?key=<API密钥>&id=<用户ID>&rel=<关系类别>&page=<页
   "pages": <总页数>,
   "data": [
     "<用户ENS地址>" ...
+  ]
+}
+```
+
+例如：
+```
+{
+  "sect_sum": 3,
+  "probab_sum": 2,
+  "pages": 1,
+  "data": [
+    "alice.eth",
+    "a.alice.eth",
+    "bob.eth"
   ]
 }
 ```
