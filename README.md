@@ -79,7 +79,7 @@ GET <PDS服务器URL>?type=author&user=<用户编号>&page=<页码>
 ```
 其中，页码从0开始。服务器返回一个`list<string>[*]`（字符串组成的JSON列表），每个字符串代表帖子的IPFS QID。
 
-帖子IPFS中的一个普通文件，为Protobuf格式，定义：
+帖子是IPFS中的一个普通文件，为Protobuf格式，定义：
 ```proto
 message Post {
   uint64 timeseq = 0; // 发送时间戳（秒级）
