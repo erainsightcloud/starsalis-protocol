@@ -82,10 +82,10 @@ GET <PDS服务器URL>?type=author&user=<用户编号>&page=<页码>
 帖子是IPFS中的一个普通文件，为Protobuf格式，定义：
 ```proto
 message Post {
-  uint64 timeseq = 0; // 发送时间戳（秒级）
-  string sender = 0; // 发送者ENS域名
-  string data = 0; // 发送的内容（HTML）
-  bytes sign = 0; // 签名
+  uint64 timeseq = 1; // 发送时间戳（秒级）
+  string sender = 2; // 发送者ENS域名
+  string data = 3; // 发送的内容（HTML）
+  bytes sign = 4; // 签名
 }
 ```
 其中，签名的格式如下：
